@@ -21,7 +21,7 @@ public class NaverPlaceApiClient {
 
     private static final int MAX_429_RETRIES = 3;
     private static final int DISPLAY = 20;
-    private static final int MAX_REVIEW_COUNT = 20;
+    private static final int MAX_REVIEW_COUNT = 100;
 
     private final HeaderProvider headerProvider;
     private final PayloadFactory payloadFactory;

@@ -1,9 +1,18 @@
 server:
-  port: 9040
+  port: ${SERVER_PORT:9040}
 
 spring:
   application:
     name: place-crawler
 
-  profiles:
-    active: dev
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
